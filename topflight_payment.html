@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="Your description goes here">
+    	<meta name="keywords" content="one, two, three">
+	
+		<title>Topflight</title>
+		
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link href='http://fonts.googleapis.com/css?family=Merriweather:900' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Merriweather:900|Oswald' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Merriweather:900|Oswald|Source+Sans+Pro' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
+
+		<script src="topflight.js"></script>
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="https://www.paypalobjects.com/js/external/dg.js" type="text/javascript"></script>
+
+	</head>
+	<body>
+		<div id="container">
+			<header>
+				<a href="topflight.html">
+					<img src="./images/small_logo.png" height="150" width="150"> 
+					</a>
+				<h1></h1>
+
+					
+					<label for="show-menu" class="show-menu">Show Menu</label>
+					<input type="checkbox" id="show-menu" role="button">
+					<ul id="menu"> 
+					
+	  						<li><a href="#">Divisions</a> 
+	  							<ul class="hidden">
+	  								<li><a href="topflight_13U.html">13U</a></li> 
+	  								<li><a href="topflight_14U.html">14U</a></li> 
+	  							</ul>
+	  						</li>
+	  						<li><a href="topflight_about_us.html">About Us</a></li> 
+	  						<li><a href="topflight_schedule.html">Schedule</a></li> 
+							<li><a href="topflight_payment.html">Payment</a></li> 
+							<li><a href="topflight_lessons.html">Lessons</a></li> 
+							<li><a href="topflight_contact.html">Contact</a></li> 
+							<li><a href="topflight_gallery.html">Gallery</a></li> 
+					</ul>   
+				
+					
+			</header>
+
+			
+			
+				<div class="detailbox">
+					<h3>Make a Payment</h3>
+					<form action="https://www.sandbox.paypal.com/webapps/adaptivepayment/flow/pay" target="PPDGFrame" class="standard">
+						<label for="buy">Buy Now:</label>
+						<input type="image" id="submitBtn" value="Pay with PayPal" src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif">
+						<input id="type" type="hidden" name="expType" value="light">
+						<input id="paykey" type="hidden" name="paykey" value="insert_pay_key">
+						</form>
+
+						<script type="text/javascript" charset="utf-8">
+						var embeddedPPFlow = new PAYPAL.apps.DGFlow({trigger: 'submitBtn'});
+						</script>
+
+	    		</div>	
+			
+		
+			
+			
+
+			
+
+		</div><!-- #container --> 
+			<footer>
+				&copy; 2014 Top Flight Baseball.
+			</footer>
+	</body>
+</html>
