@@ -5,7 +5,7 @@
     	<meta name="description" content="Your description goes here">
     	<meta name="keywords" content="one, two, three">
 	
-		<title>Topflight</title>
+		<title>Top Flight</title>
 		
 		<!-- external CSS link -->
 		<link rel="stylesheet" href="css/normalize.css">
@@ -21,49 +21,78 @@
 
 	</head>
 	<body>
-		<div id="container">
-			<header>
-				<a href="topflight.html">
-					<img src="./images/small_logo.png" height="150" width="150"> 
-					</a>
-				<h1></h1>
+		<header id="page-header">
+			<div class="wrapper">
+				<h1><a href="index.html">
+						<img src="./images/Top-Flight-Script-Logo.png" height="196" width="373" center> 
+						</a></h1>
 
+				<nav>
 					
 					<label for="show-menu" class="show-menu">Show Menu</label>
 					<input type="checkbox" id="show-menu" role="button">
-					<ul id="menu"> 
-					
-	  						<li><a href="#">Divisions</a> 
-	  							<ul class="hidden">
-	  								<li><a href="topflight_13U.html">13U</a></li> 
-	  								<li><a href="topflight_14U.html">14U</a></li> 
-	  							</ul>
-	  						</li>
-	  						<li><a href="topflight_about_us.html">About Us</a></li> 
-	  						<li><a href="topflight_schedule.html">Schedule</a></li> 
-							<li><a href="topflight_payment.html">Payment</a></li> 
-							<li><a href="topflight_lessons.html">Lessons</a></li> 
-							<li><a href="topflight_contact.html">Contact</a></li> 
-							<li><a href="topflight_gallery.html">Gallery</a></li> 
-					</ul>   
-				
-					
-			</header>
+						<ul id="menu"> 
+							<div class="leftnav">
+								<li><a href="#">DIVISIONS</a> 
+		  							<ul class="hidden">
+		  								<li><a href="topflight_13U.html">13U</a></li> 
+		  								<li><a href="topflight_14U.html">14U</a></li> 
+		  							</ul>
+		  						</li>
+		  						<li><a href="topflight_about_us.html">ABOUT US</a></li> 
+		  						<li><a href="topflight_schedule.html">SCHEDULE</a></li> 
+								<li><a href="topflight_payment.html">PAYMENT</a></li> 
+								<li><a href="topflight_lessons.html">LESSONS</a></li> 
+								<li><a href="topflight_contact.html">CONTACT</a></li> 
+							</div>	
+							
+							<div class="rightnav">	
+								<li><a href="topflight_gallery.html">GALLERY</a></li> 
+							</div>
+						</ul>   
+				</nav>
+			</div>
+	</header>
+		<div id="container">
 
-			
-			
 				<div class="detailbox">
-					<h3>Make a Payment</h3>
-					<form action="https://www.sandbox.paypal.com/webapps/adaptivepayment/flow/pay" target="PPDGFrame" class="standard">
-						<label for="buy">Buy Now:</label>
-						<input type="image" id="submitBtn" value="Pay with PayPal" src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif">
-						<input id="type" type="hidden" name="expType" value="light">
-						<input id="paykey" type="hidden" name="paykey" value="insert_pay_key">
-						</form>
+					<h3>Make a Payment</h3><hr>
+					<p>We are currently accepting payments via personal check, PayPal, and credit card. If you would like to pay online, please enter you child's name and the tuition or lesson amount.</p>
+					<h4>Tuition Schedule for 13U and 14U Divisions</h4>
+					<ul>
+						<li>Registration fee...................$250.00</li>
+						<li>Spring Session.....................$175.00</li>
+						<li>Summer Session.....................$275.00</li>
+					</ul>
 
-						<script type="text/javascript" charset="utf-8">
-						var embeddedPPFlow = new PAYPAL.apps.DGFlow({trigger: 'submitBtn'});
-						</script>
+
+				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+					<input type="hidden" name="cmd" value="_xclick">
+					<input type="hidden" name="business" value="kayperth20@gmail.com">
+					<input type="hidden" name="lc" value="US">
+					<input type="hidden" name="button_subtype" value="services">
+					<input type="hidden" name="no_note" value="0">
+					<input type="hidden" name="currency_code" value="USD">
+					<input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
+					<table>
+					<tr><td><input type="hidden" name="on0" value="Top Flight Tuition">Top Flight Tuition</td></tr><tr><td><select name="os0">
+						<option value="Option 1">Option 1 $200.00 USD</option>
+						<option value="Option 2">Option 2 $300.00 USD</option>
+						<option value="Option 3">Option 3 $400.00 USD</option>
+					</select> </td></tr>
+					</table>
+					<input type="hidden" name="currency_code" value="USD">
+					<input type="hidden" name="option_select0" value="Option 1">
+					<input type="hidden" name="option_amount0" value="200.00">
+					<input type="hidden" name="option_select1" value="Option 2">
+					<input type="hidden" name="option_amount1" value="300.00">
+					<input type="hidden" name="option_select2" value="Option 3">
+					<input type="hidden" name="option_amount2" value="400.00">
+					<input type="hidden" name="option_index" value="0">
+					<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+					<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+				</form>
+
 
 	    		</div>	
 			

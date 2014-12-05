@@ -38,11 +38,12 @@
 /*******************************************/
 
 body {
-     background: #585858;
+     background: white;
      background-size: 100%;
      font-size: 12px;
-     line-height: 1.4;
+     line-height: 1.5;
      font-family: Helvetica;
+     margin:0px;
 }
 
 
@@ -52,76 +53,108 @@ body {
 
 /* Center the container */
 #container {
-	width: 80%;
+	width: 100%;
     max-width: 985px;
-	margin: auto;
+    margin: 40px auto auto auto;
     height:1200px;
   
 }
 
-header {
-     
-     color:white;
-     padding-right: 10px;
-     margin-bottom: 40px;
-    
-
+h1 {
+     background-image: url("../images/header_image.png");
+     background-repeat: no-repeat;
+     border-bottom: 5px solid white;
+     margin:0px;
+     padding-top: 30px;
+     background-size: cover;
+     height:250px;
+     font-family: 'Oswald', sans-serif;
+     font-size: 50px;
+     text-align: center;
 }
 
+.wrapper {
+    max-width: 1280px;
+    margin:auto;
+}
 
-/*#splash {
-    
-     background: red;
-     width:50%;
-     height:400px;
-     border-radius: 4px;
-
-}*/
+#page-header{
+    overflow:hidden;
+}
 
 ul #menu {
+    width:100%;
+   
+   
     
 }
 /*Strip the ul of padding and list styling*/
-ul {
+nav ul {
     list-style-type:none;
+    background-image: url("../images/full_wood_texture.png");
     margin:0;
+    border-top: 10px white;
     padding:0;
     position: absolute;
+    width: 100%
 }
 
 /*Create a horizontal list with spacing*/
-li {
+nav li {
     display:inline-block;
+    width: 14.285%;
     float: left;
-    margin-right: 1px;
+    
 }
 
 /*Style for menu links*/
-li a {
+nav li a {
     display:block;
     width:auto;
     min-width:140px;
-    height: 50px;
+    height: 40px;
     text-align: center;
     line-height: 50px;
-    font-family: Oswald, sans-serif;
-    color: #fff;
-    background: #2f3036;
+    font-family: Oswald;
+    color: red;
+    background: none;
     text-decoration: none;
+    margin:10px;
+    padding-right: 20px;
+    padding-left: 5px;
+    padding-bottom: 10px;
+
+    
 }
+
+.leftnav li a {
+    border-right: 1px solid red;
+}
+
+.rightnav li a {
+    border-right: none;
+}
+
+
 
 /*Hover state for top level links*/
 li:hover a {
-    background: #19c589;
+    text-decoration: underline;
 }
+
 
 /*Style for dropdown links*/
 li:hover ul a {
-    background: #f3f3f3;
+    background-image: url("../images/full_wood_texture.png");
+    width:100px;
     color: #2f3036;
     height: 40px;
     line-height: 40px;
+    margin: 0px;
+    border-right:none;
 }
+
+
 
 /*Hover state for dropdown links*/
 li:hover ul a:hover {
@@ -150,6 +183,8 @@ li ul li a {
 /*Display the dropdown on hover*/
 ul li a:hover + .hidden, .hidden:hover {
     display: block;
+    background: none;
+
 }
 
 /*Style 'show menu' label button and hide it by default*/
@@ -157,7 +192,7 @@ ul li a:hover + .hidden, .hidden:hover {
     font-family: "Oswald", sans-serif;
     text-decoration: none;
     color: #fff;
-    background: #19c589;
+    background-image: url("../images/full_wood_texture.png");
     text-align: center;
     padding: 10px 0;
     display: none;
@@ -189,13 +224,14 @@ aside {
      margin-top: 60px; 
 }
 
-.contentbox {
-     background-color:rgba(214, 213, 212, 0.85);
-     width: auto;
-     padding:10px;
-     margin-bottom: 10px;
+article {
+     
+     width: 100%;
+     background-size: 100%;
+     padding:0px;
+     margin-bottom: 20px;
      float:left;
-     color: black;
+     color: white;
      box-sizing: border-box;
      font-family: 'Source Sans Pro', sans-serif;
      font-size: 20px;
@@ -203,8 +239,48 @@ aside {
 
 }
 
+article h3 {
+    font-color: white;
+     margin:0px;
+     padding: 20px;
+
+}
+
+article p{
+    margin: 0px;
+    padding:20px;
+}
+
+.uniform{
+  
+    background-image: url("../images/uniform-photo_overlay.png");
+    background-size: contain;
+
+    background-repeat: no-repeat;
+
+}
+
+.bat {
+    background-image: url("../images/Glove-and-ball_overlay.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+}
+
+.swingtop{
+   background-image: url("../images/swing-photo_overlay.png");
+   background-size: 100%;
+   background-repeat: no-repeat;
+}
+
+.swingbottom{
+    background-image: url("../images/batters-legs_overlay.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
 .contentbox ul {
-    background-color:rgba(214, 213, 212, 0.85);
+    background-color: gray;
      width: auto;
      padding:10px;
      margin-bottom: 10px;
@@ -220,11 +296,12 @@ aside {
 
 .detailbox {
 
-     background-color:rgba(214, 213, 212, 0.85);
-     width: 100%;
-     color: black;
+     background-image: url("../images/Glove-and-ball_overlay.png");
+     background-repeat: no-repeat;
+     background-size: 100%;
+     color: white;
      border-style: 10px solid white;
-     padding: 20px;
+     padding: 10px 20px 10px 20px;
      box-sizing: border-box;
      margin-top: 120px;
      margin-right: 10px;
@@ -234,76 +311,17 @@ aside {
 
 }
 
-
-aside .smallbox a{ 
-     font-size: 20px;
-
-     background: black;
-     color:white;
-     font-family: 'Oswald', sans-serif;
-     border-radius: 3px;
-     padding: 10px;
-     
-}
-
-aside .social {
-    background-color:rgba(214, 213, 212, 0.85);
-     width: 100%;
-     padding: 10px;
-     margin-right: auto;
-     margin-left: auto;
-     margin-bottom: 10px;
-     float:left;
-     color: black;
-     box-sizing: border-box;
-     font-family: 'Source Sans Pro', sans-serif;
-     font-size: 20px;
-     box-shadow: 1px 1px 1px black;
-}
-
-aside .social a {
-  padding-left: 20px;
-  text-decoration: none;
-  text-align: center;
-
-}
-
-
-header h1 {
-     font-family: 'Oswald', sans-serif;
-     font-size: 50px;
-     text-align: center;
- 
-}
-
-
-h3 {
-      font-family: 'Oswald', sans-serif;
-      font-size: 25px;
-      text-align: left;
-}
-
-h4 a{
-    font-family: 'Source Sans Pro', sans-serif;
-     font-size: 25px;
-     margin:0;
-     color:black;
-
+.coach_bio {
+    width: 40%;
+    height: 200px;
+    background:gray;
+    float: left;
 }
 
 
 
-footer {
-     background: black;
-     font-family: 'Source Sans Pro', sans-serif;
-     color:white;
-     font-size: 20px;
-     padding: 20px;
-     height: 30px;
-     position: relative;
-}
 
-.smallbox {
+.news {
      background-color:rgba(214, 213, 212, 0.85);
      width: auto;
      padding: 10px;
@@ -314,8 +332,81 @@ footer {
      font-family: 'Source Sans Pro', sans-serif;
      font-size: 20px;
      box-shadow: 1px 1px 1px black;
+
+     
 }
 
+
+h3 {
+
+      font-family: 'Oswald', sans-serif;
+      font-size: 25px;
+      text-align: left;
+}
+
+.detailbox h4 {
+    font: white;
+    font-family: 'Oswald', sans-serif;
+    
+}
+
+.detailbox ul {
+
+}
+
+h4 a{
+    font-family: 'Source Sans Pro', sans-serif;
+     font-size: 25px;
+     margin-bottom:none;
+     color:black;
+
+}
+
+
+
+footer {
+     background: gray;
+     font-family: 'Source Sans Pro', sans-serif;
+     color:white;
+     font-size: 20px;
+     padding: 20px;
+     height: 30px;
+     position: relative;
+}
+
+.logo {
+     float: left;
+     margin-top: 40px;
+}
+.smallbox {
+     background-color:rgba(214, 213, 212, 0.85);
+     width: auto;
+     padding: 0px;
+     margin-bottom: 10px;
+     float:left;
+     color: white;
+     box-sizing: border-box;
+     font-family: 'Source Sans Pro', sans-serif;
+     font-size: 20px;
+     box-shadow: 1px 1px 1px black;
+}
+
+aside .smallbox a{ 
+     font-size: 20px;
+     margin: 0px;
+     text-decoration: none;
+     background: white;
+     color:blue;
+     font-family: 'Oswald', sans-serif;
+     border-radius: 3px;
+     padding: 10px;
+     
+}
+
+aside .smallbox h3 {
+    margin:0;
+    padding: 20px;
+}
 
 
 .column:last-child {
@@ -340,7 +431,19 @@ footer {
     /*Make all menu links full width*/
     ul li, li a {
         width: 100%;
+         background-image: url("../images/full_wood_texture.png");
     }
+
+    li:hover ul a {
+        background-image: url("../images/full_wood_texture.png");
+        width:100%;
+        color: #2f3036;
+        height: 40px;
+        line-height: 40px;
+        margin: 0px;
+        border-right:none;
+    }
+
     .show-menu {
         display:block;
     }
@@ -353,6 +456,8 @@ footer {
         float:none;
         width:auto;
     }
+
+
 }
 
 
