@@ -391,7 +391,7 @@ button {
      font-family: 'Oswald', sans-serif;
      border-radius: 4px;
      padding: 10px;
-     float: left;
+    
 }
 
 button:hover {
@@ -432,7 +432,35 @@ button:hover {
     color: blue;
     text-decoration: none; 
     }
+ 
+ .detailbox a {
+    background:none;
+    color: white;
+    text-decoration: none; 
+    font-size: 20px;
+    font-family: "Oswald",sans-serif;
+ }
 
+.waivers {
+    width: 40%;
+    padding:10px;
+    margin-right: 20px;
+    background: rgba(255,255,255,.4);
+    margin:15px;
+    border-radius: 6px;
+    color: white;
+    
+}
+
+.waivers a {
+    color: white;
+    text-decoration: none;
+    font-family: "Oswald", sans-serif;
+}
+
+.waivers a:hover{
+    color:blue;
+}
 .smallbox {
      background-color:rgba(214, 213, 212, 0.85);
      width: auto;
@@ -464,8 +492,14 @@ h3 {
 }
 
 .contact_info {
-    margin-bottom: 20px;
-    width:15%;
+    margin: 15px;
+    width:30%;
+    float:left;
+    padding:20px;
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
+    min-width: 122px;
+    
 }
 
 h4 a{
