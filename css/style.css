@@ -41,7 +41,6 @@ body {
      background: white;
      background-size: 100%;
      font-size: 12px;
-     line-height: 1.5;
      font-family: Helvetica;
      margin:0px;
 }
@@ -56,7 +55,8 @@ body {
 	width: 100%;
     max-width: 985px;
     margin: 40px auto auto auto;
-    height:1200px;
+    height:auto;
+    clear:both;
   
 }
 
@@ -64,6 +64,7 @@ h1 {
      background-image: url("../images/header_image.png");
      background-repeat: no-repeat;
      border-bottom: 5px solid white;
+   
      margin:0px;
      padding-top: 30px;
      background-size: cover;
@@ -93,17 +94,20 @@ nav ul {
     list-style-type:none;
     background-image: url("../images/full_wood_texture.png");
     margin:0;
+    overflow: hidden;
     border-top: 10px white;
     padding:0;
     position: absolute;
-    width: 100%
+    width: 100%;
+    max-width: 1279px;
 }
 
 /*Create a horizontal list with spacing*/
 nav li {
     display:inline-block;
-    width: 14.285%;
+    width: 12.5%;
     float: left;
+    position: relative;
     
 }
 
@@ -112,54 +116,31 @@ nav li a {
     display:block;
     width:auto;
     min-width:140px;
-    height: 40px;
+    height: 50px;
     text-align: center;
-    line-height: 50px;
     font-family: Oswald;
-    color: red;
+    color: #B22812;
     background: none;
     text-decoration: none;
-    margin:10px;
-    padding-right: 20px;
-    padding-left: 5px;
-    padding-bottom: 10px;
-
-    
+    padding: 20px 20px;
+    min-width: 8%;
 }
 
-.leftnav li a {
-    border-right: 1px solid red;
+#menu li a {
+    border-right: 1px solid #B22812;
+ 
 }
 
-.rightnav li a {
+#menu ul.hidden li a {
     border-right: none;
 }
-
-
+#menu li:last-child  a{
+    border-right:none;
+}
 
 /*Hover state for top level links*/
 li:hover a {
     text-decoration: underline;
-}
-
-
-/*Style for dropdown links*/
-li:hover ul a {
-    background-image: url("../images/full_wood_texture.png");
-    width:100px;
-    color: #2f3036;
-    height: 40px;
-    line-height: 40px;
-    margin: 0px;
-    border-right:none;
-}
-
-
-
-/*Hover state for dropdown links*/
-li:hover ul a:hover {
-    background: #19c589;
-    color: #fff;
 }
 
 /*Hide dropdown links until they are needed*/
@@ -167,31 +148,47 @@ li ul {
     display: none;
 }
 
-/*Make dropdown links vertical*/
-li ul li {
-    display: block;
-    float: none;
-}
-
-/*Prevent text wrapping*/
-li ul li a {
-    width: auto;
-    min-width: 10%;
-    padding: 0 20px;
-}
 
 /*Display the dropdown on hover*/
-ul li a:hover + .hidden, .hidden:hover {
+ul li:hover .hidden {
     display: block;
     background: none;
-
+    top:40px;
+    width:100%;
+    position: absolute;
 }
+
+.hidden li {
+    display: block;
+    width: 100%;
+}
+
+/*Style for dropdown links*/
+.hidden li a {
+    width: 100%;
+    background-image: url("../images/full_wood_texture.png");
+    color: #2f3036;
+    height: 40px;
+    margin: 0px;
+
+  
+}
+
+/*Hover state for dropdown links*/
+.hidden a:hover {
+    opacity: 0.4;
+    text-decoration: none;
+
+  
+}
+
 
 /*Style 'show menu' label button and hide it by default*/
 .show-menu {
     font-family: "Oswald", sans-serif;
     text-decoration: none;
     color: #fff;
+    width: 100%;
     background-image: url("../images/full_wood_texture.png");
     text-align: center;
     padding: 10px 0;
@@ -224,19 +221,26 @@ aside {
      margin-top: 60px; 
 }
 
+
+
 article {
      
      width: 100%;
      background-size: 100%;
      padding:0px;
+     height: 300px;
      margin-bottom: 20px;
      float:left;
      color: white;
      box-sizing: border-box;
-     font-family: 'Source Sans Pro', sans-serif;
+     font-family: "Oswald", sans-serif;
      font-size: 20px;
      box-shadow: 1px 1px 1px black;
 
+}
+
+article:hover {
+    opacity: 0.6;
 }
 
 article h3 {
@@ -248,39 +252,38 @@ article h3 {
 
 article p{
     margin: 0px;
-    padding:20px;
+    padding:35px;
 }
 
 .uniform{
   
     background-image: url("../images/uniform-photo_overlay.png");
-    background-size: contain;
-
+    background-size: cover;
     background-repeat: no-repeat;
 
 }
 
 .bat {
     background-image: url("../images/Glove-and-ball_overlay.png");
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
 
 }
 
 .swingtop{
    background-image: url("../images/swing-photo_overlay.png");
-   background-size: 100%;
+   background-size: cover;
    background-repeat: no-repeat;
 }
 
 .swingbottom{
     background-image: url("../images/batters-legs_overlay.png");
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
 .contentbox ul {
-    background-color: gray;
+     background-color: gray;
      width: auto;
      padding:10px;
      margin-bottom: 10px;
@@ -295,50 +298,160 @@ article p{
 }
 
 .detailbox {
-
+     float:left;
      background-image: url("../images/Glove-and-ball_overlay.png");
      background-repeat: no-repeat;
-     background-size: 100%;
+     background-size: cover;
      color: white;
      border-style: 10px solid white;
      padding: 10px 20px 10px 20px;
      box-sizing: border-box;
-     margin-top: 120px;
+     margin-top: 40px;
      margin-right: 10px;
      font-family: 'Source Sans Pro', sans-serif;
      font-size: 20px;
      box-shadow: 1px 1px 1px black;
+     border-radius: 4px;
+}
 
+.detailbox h4 {
+    margin:0px;
+    padding:0px;
+}
+
+.paypal_button {
+    width: 200px;
+}
+
+.payment_form {
+    border: none;
+    margin: 50px;
+    padding: 0px;
+
+}
+
+.pricing {
+    float: left;
+    width: 30%;
+    padding:10px;
+    background: rgba(255,255,255,.4);
+    display: inline-block;
+    margin:15px;
+    border-radius: 6px;
+    color: black;
+}
+
+table {
+    margin-bottom: 30px;
+    font-family: "Oswald", sans-serif;
+}
+
+form .contact{
+    margin: 0 auto;
+    width: 600px;
+    padding:60px;
+}
+
+label {
+    display: inline-block;
+    width: 90px;
+    text-align: left;
+}
+
+input, textarea {
+    font: 1em , "Oswald",sans-serif;
+    width: 500px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin:10px;
+}
+
+input {
+    border-radius: 6px;
+}
+
+input:focus, textarea:focus {
+    border-color: #000;
+}
+
+textarea {
+    vertical-align: top;
+    height: 5em;
+    resize: vertical;
+    border-radius: 6px;
+}
+
+button {
+     font-size: 18px;
+     margin-top: 20px;
+     margin-bottom: 40px;
+     text-decoration: none;
+     background: #D9D9D9;
+     color:#0947B2;
+     font-family: 'Oswald', sans-serif;
+     border-radius: 4px;
+     padding: 10px;
+     float: left;
+}
+
+button:hover {
+    background: white;
 }
 
 .coach_bio {
-    width: 40%;
-    height: 200px;
-    background:gray;
-    float: left;
+    width: 35%;
+    min-width: 300px;
+    display: inline-block;
+    margin-left: 50px;
+    margin-right: 20px;
 }
 
-
-
+.detailbox img {
+    width:  50%;
+    min-width: 400px;
+    height: auto;
+    border-radius:15px;
+    position: relative;
+}
 
 .news {
      background-color:rgba(214, 213, 212, 0.85);
-     width: auto;
+     width: 100%;
      padding: 10px;
      margin-bottom: 10px;
      float:left;
      color: black;
      box-sizing: border-box;
-     font-family: 'Source Sans Pro', sans-serif;
+     font-family: 'Oswald', sans-serif;
      font-size: 20px;
-     box-shadow: 1px 1px 1px black;
-
-     
+     box-shadow: 1px 1px 1px black;  
 }
 
+ .news a{
+    background:none;
+    color: blue;
+    text-decoration: none; 
+    }
+
+.smallbox {
+     background-color:rgba(214, 213, 212, 0.85);
+     width: auto;
+     height: 300px;
+     padding: 0px;
+     margin-bottom: 20px;
+     float:left;
+     color: white;
+     box-sizing: border-box;
+     font-family: 'Oswald', sans-serif;
+     font-size: 20px;
+     box-shadow: 1px 1px 1px black;
+}
+
+.smallbox p {
+    padding: 0px  20px 0px 20px;
+}
 
 h3 {
-
       font-family: 'Oswald', sans-serif;
       font-size: 25px;
       text-align: left;
@@ -350,8 +463,9 @@ h3 {
     
 }
 
-.detailbox ul {
-
+.contact_info {
+    margin-bottom: 20px;
+    width:15%;
 }
 
 h4 a{
@@ -359,47 +473,45 @@ h4 a{
      font-size: 25px;
      margin-bottom:none;
      color:black;
-
 }
-
-
 
 footer {
      background: gray;
+     width: 100%;
      font-family: 'Source Sans Pro', sans-serif;
      color:white;
      font-size: 20px;
      padding: 20px;
-     height: 30px;
-     position: relative;
+     height: 60px;
+     float: left;
+     margin-top: 20px;
 }
 
 .logo {
      float: left;
      margin-top: 40px;
 }
-.smallbox {
-     background-color:rgba(214, 213, 212, 0.85);
-     width: auto;
-     padding: 0px;
-     margin-bottom: 10px;
-     float:left;
-     color: white;
-     box-sizing: border-box;
-     font-family: 'Source Sans Pro', sans-serif;
-     font-size: 20px;
-     box-shadow: 1px 1px 1px black;
-}
+
+.fotorama {
+     border: 10px solid white;
+     height: 550px;
+     width: 900px;
+     margin-right: auto;
+     margin-left: auto;
+     position: center;
+}    
 
 aside .smallbox a{ 
      font-size: 20px;
-     margin: 0px;
+     margin-bottom: 20px;
+     margin-left: 20px;
      text-decoration: none;
      background: white;
      color:blue;
      font-family: 'Oswald', sans-serif;
      border-radius: 3px;
      padding: 10px;
+     float: left;
      
 }
 
@@ -413,9 +525,6 @@ aside .smallbox h3 {
   border-right: none;
 }
 
-
-
-
 /*Responsive Styles*/
 
 @media screen and (max-width : 760px){
@@ -424,14 +533,14 @@ aside .smallbox h3 {
         position: static;
         display: none;
     }
-    /*Create vertical spacing*/
+
     li {
         margin-bottom: 1px;
     }
-    /*Make all menu links full width*/
+   
     ul li, li a {
         width: 100%;
-         background-image: url("../images/full_wood_texture.png");
+        background-image: url("../images/full_wood_texture.png");
     }
 
     li:hover ul a {
@@ -439,7 +548,6 @@ aside .smallbox h3 {
         width:100%;
         color: #2f3036;
         height: 40px;
-        line-height: 40px;
         margin: 0px;
         border-right:none;
     }
@@ -457,9 +565,18 @@ aside .smallbox h3 {
         width:auto;
     }
 
+    .news ul{
+        width: 100%;
+        display: block;
+        background:none;
+    }
 
-}
+    .news li{
+        background: none;
+    }
 
+    .coach_bio {
+        width: 100%;
+    }
 
-
-
+    
