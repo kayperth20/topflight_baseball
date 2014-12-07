@@ -85,16 +85,13 @@ h1 {
 
 ul #menu {
     width:100%;
-   
-   
-    
 }
 /*Strip the ul of padding and list styling*/
 nav ul {
     list-style-type:none;
     background-image: url("../images/full_wood_texture.png");
     margin:0;
-    overflow: hidden;
+    /*overflow: hidden;*/
     border-top: 10px white;
     padding:0;
     position: absolute;
@@ -105,7 +102,7 @@ nav ul {
 /*Create a horizontal list with spacing*/
 nav li {
     display:inline-block;
-    width: 12.5%;
+    width: 11.1%;
     float: left;
     position: relative;
     
@@ -152,7 +149,7 @@ li ul {
 /*Display the dropdown on hover*/
 ul li:hover .hidden {
     display: block;
-    background: none;
+    background-image: url("../images/full_wood_texture.png");
     top:40px;
     width:100%;
     position: absolute;
