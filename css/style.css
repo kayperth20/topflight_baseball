@@ -418,7 +418,7 @@ button:hover {
     display: inline-block;
 }
 
-.detailbox img {
+.coach_bio img {
     width:  100%;
     min-width: 200px;
     max-width: 500px;
@@ -426,6 +426,7 @@ button:hover {
     border-radius:15px;
     position: relative;
 }
+
 
 .news {
      background-color:rgba(214, 213, 212, 0.85);
@@ -548,7 +549,7 @@ footer {
 .fotorama {
      border: 10px solid white;
      height: 550px;
-     width: 900px;
+     width: 80%;
      margin-right: auto;
      margin-left: auto;
      position: center;
