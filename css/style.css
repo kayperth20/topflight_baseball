@@ -79,9 +79,6 @@ h1 {
     margin:auto;
 }
 
-#page-header{
-    overflow:hidden;
-}
 
 ul #menu {
     width:100%;
@@ -91,7 +88,6 @@ nav ul {
     list-style-type:none;
     background-image: url("../images/full_wood_texture.png");
     margin:0;
-    /*overflow: hidden;*/
     border-top: 10px white;
     padding:0;
     position: absolute;
@@ -104,7 +100,7 @@ nav li {
     display:inline-block;
     width: 11.1%;
     float: left;
-    position: relative;
+ 
     
 }
 
@@ -151,7 +147,7 @@ ul li:hover .hidden {
     display: block;
     background-image: url("../images/full_wood_texture.png");
     top:40px;
-    width:100%;
+    width:11.1%;
     position: absolute;
 }
 
@@ -162,14 +158,16 @@ ul li:hover .hidden {
 
 /*Style for dropdown links*/
 .hidden li a {
-    width: 100%;
+
     background-image: url("../images/full_wood_texture.png");
+
     color: #2f3036;
     height: 40px;
     margin: 0px;
 
   
 }
+
 
 /*Hover state for dropdown links*/
 .hidden a:hover {
@@ -329,13 +327,20 @@ article p{
 
 .pricing {
     float: left;
-    width: 30%;
+    width: auto;
+    min-width: 200px;
     padding:10px;
     background: rgba(255,255,255,.4);
-    display: inline-block;
+    display: block;
     margin:15px;
     border-radius: 6px;
-    color: black;
+    color: white;
+}
+
+.coaches {
+    float: right;
+    margin-right: 40px;
+    min-width: 400px;
 }
 
 table {
@@ -396,16 +401,22 @@ button:hover {
 }
 
 .coach_bio {
-    width: 35%;
-    min-width: 300px;
+    width: 25%;
+    min-width: 150px;
     display: inline-block;
     margin-left: 50px;
     margin-right: 20px;
+    padding-bottom: 60px;
+}
+
+.lessons {
+    display: inline-block;
 }
 
 .detailbox img {
-    width:  50%;
-    min-width: 400px;
+    width:  100%;
+    min-width: 200px;
+    max-width: 500px;
     height: auto;
     border-radius:15px;
     position: relative;
@@ -574,6 +585,10 @@ aside .smallbox h3 {
         background-image: url("../images/full_wood_texture.png");
     }
 
+    ul li:hover .hidden {
+   width: 100%
+}
+
     li:hover ul a {
         background-image: url("../images/full_wood_texture.png");
         width:100%;
@@ -583,12 +598,19 @@ aside .smallbox h3 {
         border-right:none;
     }
 
+    .pricing {
+        width: 80%
+   
+}
+
     .show-menu {
         display:block;
     }
 
     #main {
         width: auto;
+        margin: auto;
+        display: block;
     }
 
     aside {
@@ -608,6 +630,10 @@ aside .smallbox h3 {
 
     .coach_bio {
         width: 100%;
+    }
+
+    .coaches {
+        float: left;
     }
 
     
