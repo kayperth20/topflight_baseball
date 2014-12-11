@@ -332,18 +332,31 @@ article p{
 
 .pricing {
     float: left;
-    width: auto;
-    min-width: 200px;
-    padding:10px;
+    width: 30%;
+    min-width: 275px;
+    padding:20px;
     background: rgba(255,255,255,.4);
     display: block;
     margin:15px;
     border-radius: 6px;
     color: white;
+
 }
 
+.fees {
+    float: left;
+    width: 70%;
+    min-width: 275px;
+    padding:20px;
+    background: rgba(255,255,255,.4);
+    display: block;
+    margin:15px;
+    border-radius: 6px;
+    color: white;
+
+}
 .coaches {
-    float: right;
+    float: left;
     margin-right: 40px;
     min-width: 400px;
 }
@@ -388,7 +401,7 @@ textarea {
     border-radius: 6px;
 }
 
-button {
+.form_wrapper submit {
      font-size: 18px;
      margin-top: 20px;
      margin-bottom: 40px;
@@ -424,7 +437,8 @@ button:hover {
 .coach_bio img {
     width:  100%;
     min-width: 200px;
-    max-height: 300px;
+    height: auto;
+    max-height: 400px;
     max-width: 500px;
     height: auto;
     border-radius:15px;
@@ -603,7 +617,6 @@ aside .smallbox h3 {
 
     ul li:hover .hidden {
         width: 100%
-    
     }
 
     li:hover ul a {
@@ -616,9 +629,8 @@ aside .smallbox h3 {
     }
 
     .pricing {
-        width: 90%
-   
-}
+        width: 90%;
+    }
 
     .show-menu {
         display:block;
