@@ -473,6 +473,12 @@ button:hover {
     font-family: "Oswald",sans-serif;
  }
 
+.aboutimg{
+    width:100%;
+    height:auto;
+    position: center;
+    border-radius: 40px;
+}
 .waivers {
     width: 40%;
     min-width: 300px;
