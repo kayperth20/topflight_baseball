@@ -171,6 +171,7 @@ ul li:hover .hidden {
 
 iframe {
     border-radius: 6px;
+    background: transparent;
 }
 /*Hover state for dropdown links*/
 .hidden a:hover {
@@ -406,7 +407,9 @@ button:hover {
 
 .coach_bio {
     width: 30%;
+    font-size: 18px;
     min-width: 200px;
+
     display: inline-block;
     margin-right: 8px;
     margin-left: 18px;
@@ -421,6 +424,7 @@ button:hover {
 .coach_bio img {
     width:  100%;
     min-width: 200px;
+    max-height: 300px;
     max-width: 500px;
     height: auto;
     border-radius:15px;
@@ -643,6 +647,7 @@ aside .smallbox h3 {
 
     .coach_bio {
         width: 100%;
+       
     }
 
     .coaches {
