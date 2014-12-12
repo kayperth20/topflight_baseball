@@ -38,7 +38,7 @@
 /*******************************************/
 
 body {
-     background:#B0B0B0;
+     background:white;
      background-size: 100%;
      font-size: 12px;
      font-family: Helvetica;
@@ -362,7 +362,7 @@ article p{
     min-width: 400px;
 }
 
-table {
+/*table {
     margin-bottom: 30px;
     font-family: "Oswald", sans-serif;
 }
@@ -413,7 +413,7 @@ textarea {
      border-radius: 4px;
      padding: 10px;
     
-}
+} */
 
 button:hover {
     background: white;
@@ -448,7 +448,7 @@ button:hover {
 
 
 .news {
-     background-color: white;
+     background-color: #DFDFDF;
      width: 100%;
      padding: 10px;
      margin-bottom: 10px;
@@ -586,7 +586,7 @@ footer {
 
 .fotorama {
      border: 10px solid white;
-     height: 550px;
+     height: 500px;
      width: 80%;
      margin-right: auto;
      margin-left: auto;
