@@ -38,7 +38,7 @@
 /*******************************************/
 
 body {
-     background: white;
+     background:#B0B0B0;
      background-size: 100%;
      font-size: 12px;
      font-family: Helvetica;
@@ -57,6 +57,7 @@ body {
     margin: 40px auto auto auto;
     height:auto;
     clear:both;
+
   
 }
 
@@ -447,7 +448,7 @@ button:hover {
 
 
 .news {
-     background-color:rgba(214, 213, 212, 0.85);
+     background-color: white;
      width: 100%;
      padding: 10px;
      margin-bottom: 10px;
