@@ -437,11 +437,10 @@ button:hover {
 
 .coach_bio img {
     width:  100%;
-    min-width: 200px;
-    height: auto;
+    min-width: 250px;
+    height: 270px;
     max-height: 400px;
     max-width: 500px;
-    height: auto;
     border-radius:15px;
     position: relative;
 }
@@ -680,6 +679,11 @@ aside .smallbox h3 {
     .coach_bio {
         width: 100%;
        
+    }
+
+    .coach_bio img {
+        height:auto;
+        width: 100%
     }
 
     .coaches {
