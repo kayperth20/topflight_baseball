@@ -492,6 +492,10 @@ button:hover {
     
 }
 
+.reg_form a:hover{
+	color: blue;
+}
+
 .waivers ul {
     min-height: 200px;
 }
