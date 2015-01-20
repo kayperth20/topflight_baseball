@@ -357,7 +357,7 @@ article p{
 
 }
 .coaches {
-   
+   float:right;
     margin-right: 40px;
     min-width: 400px;
 }
