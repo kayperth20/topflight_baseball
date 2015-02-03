@@ -319,6 +319,10 @@ article p{
     padding:0px;
 }
 
+.detailbox a:hover {
+	color: blue;
+}
+
 .paypal_button {
     width: 200px;
     padding-bottom: 500px;
